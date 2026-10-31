@@ -3,7 +3,7 @@ services:
     name: e-vote-presentation
     runtime: python
     plan: free
-    buildCommand: "unzip -o e-vote-github-upload-v6.zip -d build && pip install -r build/requirements.txt && pip install --no-deps face-recognition==1.3.0"
+    buildCommand: "unzip -o e-vote-github-upload-v7.zip -d build && pip install -r build/requirements.txt && pip install --no-deps face-recognition==1.3.0"
     startCommand: "cd build && uvicorn main:app --host 0.0.0.0 --port $PORT"
     healthCheckPath: /api/health
     envVars:
